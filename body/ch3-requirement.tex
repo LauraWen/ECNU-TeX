@@ -1,0 +1,268 @@
+\chapter{正文要求}\label{chap3}
+
+\section{基本要求}
+
+\subsection{字数要求}
+
+5000字以上. 
+
+\subsection{封面要求}
+
+\subsubsection{要求1}  
+上交的每份论文都一律采用学校统一印发的外封面（装订线一律在左面）。
+
+\subsubsection{要求2}
+另附自制内封面一份（A4纸张电脑打印），内容为中外文论文题目、作者的姓名、学号、班级、指导老师的姓名与职称、论文完成时间。
+
+\subsection{开题报告要求}
+开题报告内容包括：选题的背景与意义（对与选题有关的国内外研究现状、进展情况、存在的问题等进行调研，在此基础上提出选题的研究意义），课题研究的主要内容、方法、技术路线，课题研究拟解决的主要问题及创新之处，课题研究的总体安排与进度，参考文献等方面。开题报告表格至教务处网站下载。
+
+\section{常用环境示例}
+
+
+\subsection{有序列表}
+\begin{enumerate}
+	\item
+	项目列表
+	\item
+	项目列表
+	\item
+	项目列表
+	
+	\begin{enumerate}
+		\item
+		项目列表
+		\item
+		项目列表
+		\item
+		项目列表
+	\end{enumerate}
+\end{enumerate}
+
+\subsection{无序列表}
+
+
+\begin{itemize}
+	\item
+	项目列表
+	\item
+	项目列表
+	
+	\begin{itemize}
+		\item
+		项目列表
+		\item
+		项目列表
+		\item
+		项目列表
+	\end{itemize}
+\end{itemize}
+
+\subsection{公式}
+\subsubsection{单行公式}
+\begin{itemize}
+	\item
+	公式示例1: \[\mu_1\le\mu_2\le \dots\le \mu_k.\]
+	\item
+	公式示例2: \begin{equation}\label{eq1}
+	x^2+y^2=1
+	\end{equation}
+	\item
+	引用: 公式\eqref{eq1}或使用cleveref包,\cref{eq1}.
+\end{itemize}
+
+\subsubsection{多行公式}
+
+\begin{itemize}
+	\item
+	公式示例3:\\
+	\begin{align}
+	x^2+y^2 &= 1 \label{eq4}\\
+	x_2+y_2 &= 0  \label{eq5}
+	\end{align}
+	\item
+	引用: \cref{eq4}和\cref{eq5}
+	\item
+	公式示例4:\\
+	\[
+	f(x)=\begin{cases} 1, & \mbox{If $x\ge 0$}, \\ 0,& \mbox{Otherwise,}\end{cases}
+	\]
+	\item
+	公式示例5:\\
+	
+	\begin{numcases}{|x|=}
+	x, & for $x \geq 0$\\
+	-x, & for $x < 0$
+	\end{numcases}
+\end{itemize}
+
+\subsection{align环境}
+\begin{align*}
+\operatorname{E} (Z_{n+1} - Z_n | X_1,..., X_n)
+&= \operatorname{E} (S_{n+1}^2 - (n+1) \sigma^2 - S_n^2 + n \sigma^2 | X_1,..., X_n) \\
+&= \operatorname{E} (S_{n+1}^2 - S_n^2 - (n+1) \sigma^2 + n \sigma^2 | X_1,..., X_n) \\
+&= \operatorname{E} (X_{n+1}(X_{n+1} + 2\sum_{i=1}^n X_i) - \sigma^2 | X_1,..., X_n) \\
+&= \operatorname{E} (X_{n+1}X_{n+1})
++ 2\operatorname{E} (X_{n+1}) \sum_{i=1}^n X_i - \sigma^2 \\
+&= \sigma^2  - \sigma^2 =0.
+\end{align*}
+
+\subsection{split环境（内嵌）}
+\begin{equation*}
+\begin{split}
+(a + b)^4
+&= (a + b)^2 (a + b)^2      \\
+&= (a^2 + 2ab + b^2)
+(a^2 + 2ab + b^2)        \\
+&= a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4
+\end{split}
+\end{equation*}
+
+\subsection{带大括号的多行公式}
+\paragraph{cases}
+$$
+f=
+\begin{cases}
+x + y = z,  \\
+1 + 2 = 3.  \\
+\end{cases}
+$$
+
+\paragraph{array}
+$$ F^{HLLC}=\left\{
+\begin{array}{rcl}
+F_L       &      & {0      <      S_L}\\
+F^*_L     &      & {S_L \leq 0 < S_M}\\
+F^*_R     &      & {S_M \leq 0 < S_R}\\
+F_R       &      & {S_R \leq 0}
+\end{array} \right. $$
+
+\paragraph{aligned}
+\begin{equation}
+\left\{
+\begin{aligned}
+\overset{.}x(t) &=A_{ci}x(t)+B_{1ci}w(t)+B_{2ci}u(t)  \\
+z(t) &=C_{ci}x(t)+D_{ci}u(t) \\
+\end{aligned}
+\right.
+\end{equation}
+
+
+\subsection{表格}
+本来\LaTeX 里表格的变化是非常多的，但鉴于学校要求用三线式，问题反而简单了, 见下面的例子：\cref{tab:1}和\cref{tab:1}. 
+\begin{table}[htbp]\center
+	\caption{\label{tab:1}示例表格\\Table \ref{tab:1}\quad Example Table}
+	\begin{tabular}{lcccccl}
+		\toprule
+		。。 & 。。 & 。。 & 。。 & 。。& 。。 & 。。\\
+		\midrule
+		。。 & 。。 & 。。 & 。。 & 。。& 。。 & 。。\\
+		。。 & 。。 & 。。 & 。。 & 。。& 。。 & 。。\\
+		。。 & 。。 & 。。 & 。。 & 。。& 。。 & 。。\\
+		。。 & 。。 & 。。 & 。。 & 。。& 。。 & 。。\\
+		。。 & 。。 & 。。 & 。。 & 。。& 。。 & 。。\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+\begin{table}[ht]
+	\centering
+	\caption{\label{tab:2}Iris数据\\Table \ref{tab:2}\quad Iris Data.} 
+	\begin{tabular}{rrrrrl}
+		\hline
+		& Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species \\ 
+		\hline
+		1 & 5.10 & 3.50 & 1.40 & 0.20 & setosa \\ 
+		2 & 4.90 & 3.00 & 1.40 & 0.20 & setosa \\ 
+		3 & 4.70 & 3.20 & 1.30 & 0.20 & setosa \\ 
+		4 & 4.60 & 3.10 & 1.50 & 0.20 & setosa \\ 
+		5 & 5.00 & 3.60 & 1.40 & 0.20 & setosa \\ 
+		6 & 5.40 & 3.90 & 1.70 & 0.40 & setosa \\ 
+		\hline
+	\end{tabular}
+\end{table}
+
+
+\subsection{插图}
+由于这份模板不考虑多栏排版, 以下是二个通栏图的演示：\cref{fig:1}和\cref{fig:2}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=100mm]{example-image}
+	\caption{图片测试（最小宽度）\\Figure \ref{fig:1}\quad  Image test (Minimal width)\label{fig:1}}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=130mm]{example-image}
+	%\includegraphics[width=130mm]{./figures/你自己的图像文件}
+	\caption{图片测试（最大宽度）\\Figure \ref{fig:2}\quad  Image test (Maximal width)\label{fig:2}}
+\end{figure}
+
+注意：这里为了减少图片上下的空白，使用了float宏包。
+
+
+\newcommand{\bbb}{这是一个针对定理类环境进行的科技文稿排版测试}
+
+\subsection{定理型环境示例}
+
+\begin{definition} 
+	这是一个针对定理类环境进行的科技文稿排版测试
+\end{definition}
+
+\begin{theorem}\label{th1}
+	这是一个针对定理类环境进行的科技文稿排版测试
+\end{theorem}
+
+\begin{proof}
+	这是一个针对定理类环境进行的科技文稿排版测试
+\end{proof}
+
+\begin{corollary}\label{cor1}
+	这是一个针对定理类环境进行的科技文稿排版测试
+\end{corollary}
+
+\begin{lemma}\label{lem1}
+	这是一个针对定理类环境进行的科技文稿排版测试
+\end{lemma}
+
+\begin{example}
+	这是一个针对定理类环境进行的科技文稿排版测试
+\end{example}
+
+\subsection{脚注与引用}
+
+\subsubsection{脚注}
+
+这里是脚注测试\footnote{1111111111}这里是脚注测试这里是脚注测试这里是脚注测试\footnote{2222222222}这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试\footnote{3333333333}这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试这里是脚注测试
+
+\subsubsection{定理类引用}
+
+由定理\ref{th1}我们可以知道XXXXXXXX。
+
+由引理\ref{lem1}我们可以知道XXXXXXXX。
+
+由推论\ref{cor1}我们可以知道XXXXXXXX。
+
+\subsubsection{文献引用的演示}
+
+本模板使用biblatex进行文献管理，这是一套相对较新的系统。另外，使用了hushidong制作的符合gb7714-2015标准的biblatex样式。在此对他的工作表示感谢，要完成这样的样式非常不容易。本模板中gb7714-2015.bbx与gb7714-2015.cbx即为他的作品，在这里打包发布以便使用。详见\url{https://github.com/hushidong/biblatex-gb7714-2015}查找相关资料。
+
+默认的bib文件位于\textasciitilde{}/reference/thesis-ref.bib，内容是由Wang
+Tianshu制作，在此仅作演示之用。关于bib文件的编写与管理请自行查找相关教程。
+
+默认的bib文件位于~/reference/thesis-ref.bib，内容是由Wang Tianshu制作，在此仅作演示之用。关于bib文件的编写与管理请自行查找相关教程。
+
+下方的演示已经给出了正文中引用文献的基本方法，这与传统的cite命令是类似的。如有更多需求，请至\url{https://github.com/hushidong/biblatex-gb7714-2015}查找相关资料。
+
+文献\parencite{Wuwei:2013}中提到xxxxxxx。
+
+文献\parencite{zhouxu:2019}中提到yyyyyyy。
+
+文献\parencite{tang:2008}中提到zzzzzzz。
+
+\textcolor{blue}{\textbf{\uline{本模板使用parencite而不是cite命令，因为这样能与脚注所产生编号进行区分。当然，如果你没有脚注或尾注，那么cite命令也是推荐使用的。}}}
+
+
+\nocite{*}
+

@@ -1,0 +1,89 @@
+\begin{appendix}
+	\renewcommand{\chaptername}{附录 \Alph{chapter}}
+	\renewcommand{\thesection}{\Alph{chapter}.\arabic{section}}
+	\renewcommand{\thesubsection}{\Alph{chapter}.\arabic{section}.\arabic{subsection}}
+	\renewcommand{\thesubsubsection}{\arabic{subsubsection}.}
+	\renewcommand{\thetable}{\Alph{chapter}-\arabic{table}}
+	\renewcommand{\theequation}{\Alph{chapter}-\arabic{equation}}
+	\renewcommand{\thefigure}{\Alph{chapter}-\arabic{figure}}
+
+\addtocontents{toc}{\setcounter{tocdepth}{2}}
+\setcounter{subsection}{0}
+
+%\ctexset { subsection = { name={,},number={\arabic{subsection}},format={\rmfamily \zihao {5}} } }
+%\ctexset { subparagraph = { name={(,)},number={\arabic{subparagraph}},format={\rmfamily \zihao {5}},indent=2em } }
+
+
+\chapter{附录标题}
+\section{附录中的图形、表格、公式}
+
+\subsection{公式}
+附录中的公式(\ref{equ:Call})和(\ref{equ:Put})分别为:
+\begin{equation}\label{equ:Call}
+c=S_0N(d_1)-X e^{-r T}N(d_2)
+\end{equation}
+和
+\begin{equation}\label{equ:Put}
+p=X e^{-r T}N(-d_2)-S_0N(-d_1),
+\end{equation}
+
+\subsection{图形}
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[width=100mm]{example-image}
+	\caption{图片测试（最小宽度）\\Figure \ref{fig-a1}\quad  Image test (Minimal width)\label{fig-a1}}
+\end{figure}
+
+\subsection{表格}
+\begin{table}[ht]
+	\centering
+	\caption{\label{tab-aa}Iris数据} 
+	\begin{tabular}{rrrrrl}
+		\toprule
+		& Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species \\ 
+		\midrule
+		1 & 5.10 & 3.50 & 1.40 & 0.20 & setosa \\ 
+		2 & 4.90 & 3.00 & 1.40 & 0.20 & setosa \\ 
+		3 & 4.70 & 3.20 & 1.30 & 0.20 & setosa \\ 
+		4 & 4.60 & 3.10 & 1.50 & 0.20 & setosa \\ 
+		5 & 5.00 & 3.60 & 1.40 & 0.20 & setosa \\ 
+		6 & 5.40 & 3.90 & 1.70 & 0.40 & setosa \\ 
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+\section{R代码}
+
+\subsection{使用listings}
+\begin{Rout}
+	curve(dnorm(x), xlim=c(-4,4))
+	curve(dnorm(x), xlim=c(-4,4))
+	curve(dnorm(x), xlim=c(-4,4))
+\end{Rout}
+
+\section{Python代码}
+
+% https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
+
+\subsection{使用listings}
+\begin{pyout}[frame=single]
+	import matplotlib.pyplot as plt
+	import numpy as np
+	x = np.arange(0.0, 6.0, 0.01)
+	plt.plot(x, [x**2 for x in x])
+	plt.show()
+\end{pyout}
+
+
+
+\subsection{使用pythonhighlight}
+\begin{python}
+	import matplotlib.pyplot as plt
+	import numpy as np
+	x = np.arange(0.0, 6.0, 0.01)
+	plt.plot(x, [x**2 for x in x])
+	plt.show()
+\end{python}	
+
+\end{appendix}
